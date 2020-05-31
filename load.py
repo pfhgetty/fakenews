@@ -6,8 +6,7 @@ def loadsources():
     with open(os.path.join(os.getcwd(), "trustedsources.config"), "r") as f:
         return f.read().splitlines()
 
-def get_relevant_texts(trusted_sources, target_article, keyword_search=false, use_summary=false): 
-    # assumption: article has been parse already
+def get_relevant_texts(trusted_sources, target_article, keyword_search=False, use_summary=False): 
     other_texts = []
     if keyword_search:
         target_article.nlp()
@@ -31,7 +30,6 @@ def get_relevant_texts(trusted_sources, target_article, keyword_search=false, us
         else:
             other_texts.append(article.text)
 
-
 if __name__ == '__main__':
     keyword_search = False
     target_summary = False
@@ -52,16 +50,4 @@ if __name__ == '__main__':
         target_text = target_article.text
 
     other_texts = get_relevant_texts(trusted_sources, target_article, keyword_search=False, use_summary=auxillary_summary)
-    
-    
-
-
-
-    
-
-
-
-
-
-
     
