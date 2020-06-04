@@ -29,6 +29,17 @@ def get_relevant_texts(trusted_sources, target_article, keyword_search=False, us
             other_texts.append(article.summary)
         else:
             other_texts.append(article.text)
+    
+    return other_texts
+
+def get_main_text(url, use_summary=false):
+    target_article = Article(url)
+    target_article.download()
+    target_article.parse()
+    if use_summary:
+        target_article.nlp()
+        return target_article.summary
+    return target_article.text
 
 if __name__ == '__main__':
     keyword_search = False
@@ -39,15 +50,8 @@ if __name__ == '__main__':
     print("Enter URL for comparison")
     url = "https://www.space.com/elon-musk-emotional-spacex-astronaut-launch.html"
 
-    target_article = Article(url)
-    target_article.download()
-    target_article.parse()
+    main_text = get_main_text(url)
     
-    if target_summary:
-        target_text.nlp()
-        target_text = target_article.summary
-    else:
-        target_text = target_article.text
 
-    other_texts = get_relevant_texts(trusted_sources, target_article, keyword_search=False, use_summary=auxillary_summary)
+    other_texts = get_relevant_texts(trusted_sources, main_text, keyword_search=False, use_summary=auxillary_summary)
     
