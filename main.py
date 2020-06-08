@@ -16,8 +16,9 @@ if __name__ == '__main__':
     trusted_sources = load.loadsources()
     url = "https://www.space.com/elon-musk-emotional-spacex-astronaut-launch.html"
     print(url)
-    main_text = load.get_main_text(url)
-    other_texts = load.get_relevant_texts(trusted_sources, main_text, keyword_search=False, use_summary=auxillary_summary)
+    main_article = load.get_main_article(url)
+    main_text = load.get_main_text(main_article)
+    other_texts = load.get_relevant_texts(trusted_sources, main_article, keyword_search=False, use_summary=auxillary_summary)
 
     s_d = []
     for source, (title, statement) in zip(trusted_sources, other_texts):

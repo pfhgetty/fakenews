@@ -32,7 +32,7 @@ def get_relevant_texts(trusted_sources, target_article, keyword_search=False, us
     
     return other_texts
 
-def get_main_text(url, use_summary=False):
+def get_main_article(url):
     target_article = Article(url)
     target_article.download()
     target_article.parse()
