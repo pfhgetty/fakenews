@@ -1,15 +1,21 @@
-from nlp.core import get_encoder, MODELS
+from nlp.core import get_encoder, MODELS, get_distance_func
 import numpy as np
 from scipy.spatial.distance import cosine
 import math
 gpt2_center = list(map(float, open("center.txt", 'r').read().strip('][').split(', ')))
 
 def create_test(main_statement, comparisons):
-    def tests(encoder, distance_func, file_p):
-        main_encoding = encoder(main_statement)
+    def tests(distance_func, file_p):
+        # main_encoding = encoder(main_statement)
+        s_d = []
         out = ""
         for statement in comparisons:
-            distance = distance_func(main_encoding, encoder(statement))
+            distance = distance_func(main_statement, statement)
+            s_d.append((statement, distance))
+        
+        s_d.sort(key=lambda x: x[1])
+
+        for statement, distance in s_d:
             out += "%s:\n%.3f\n" % (statement, distance)
         file_p.write(out)
     return tests
@@ -20,28 +26,13 @@ def bear_test():
     # encoder_xlnet = get_encoder(*MODELS[4])
     # encoder_electra = get_encoder(*MODELS[5])
 
-    df = lambda x, y: np.linalg.norm(x - y)
-    def df2(a=1, center=None):
-        '''
-        Returns a distance function from a scale of 0 to 1
-        The greater a is, the less strict we are in judging similarity
-        '''
-        def func(x, y):
-            if center is not None:
-                x -= center
-                y -= center
-            dist = cosine(x, y)
-            print("dist", dist)
-            return 1 - dist
-            # return 1 - dist / (dist + a)
-        return func
-    
-    ms = "The bear killed 3 people last Tuesday."
-    comparisons = ["The bear killed 4 people last Tuesday.",
+    df = get_distance_func(encoder_gpt2)
+    ms = "The bear killed three people last Tuesday."
+    comparisons = ["The bear killed four people last Tuesday.",
                    "The bear was nonviolent.",
-                   "The bear killed 3 people last Wednesday.",
-                   "The bear killed 3 people. This event occurred last Tuesday.",
-                   "The bear ate 3 people last Tuesday.",
+                   "The bear killed three people last Wednesday.",
+                   "The bear killed three people. This event occurred last Tuesday.",
+                   "The bear ate three people last Tuesday.",
                    "The President spoke in Minnesota last Tuesday.",
                    "Pancakes are made with flour.",
                    "The bear did not kill anybody last Tuesday.",
@@ -54,7 +45,7 @@ def bear_test():
     # tests(encoder_bert, df2(0.5))
     print("GPT-2")
     gpt2_file = open("gpt-2_bear_test.txt", 'w+')
-    tests(encoder_gpt2, df2(0.002), gpt2_file)
+    tests(df, gpt2_file)
     print()
     # print("XLNET")
     # tests(encoder_xlnet, df2(0.25))

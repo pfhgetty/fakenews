@@ -1,0 +1,24 @@
+The bear killed 4 people last Tuesday.:
+0.998
+The bear was nonviolent.:
+0.885
+The bear killed 3 people last Wednesday.:
+0.999
+The bear killed 3 people. This event occurred last Tuesday.:
+0.962
+The bear ate 3 people last Tuesday.:
+0.958
+The President spoke in Minnesota last Tuesday.:
+0.814
+Pancakes are made with flour.:
+0.664
+The bear did not kill anybody last Tuesday.:
+0.906
+I am not Asian.:
+0.744
+I am not not Asian.:
+0.737
+The bear did not not kill anybody last Tuesday.:
+0.908
+The bear was not nonviolent.:
+0.848
