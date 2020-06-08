@@ -5,8 +5,8 @@ import math
 gpt2_center = list(map(float, open("center.txt", 'r').read().strip('][').split(', ')))
 
 def create_test(main_statement, comparisons):
-    def tests(encoder, distance_func, file_p):
-        main_encoding = encoder(main_statement)
+    def tests(distance_func, file_p):
+        # main_encoding = encoder(main_statement)
         s_d = []
         out = ""
         for statement in comparisons:
@@ -14,7 +14,7 @@ def create_test(main_statement, comparisons):
             s_d.append((statement, distance))
         
         s_d.sort(key=lambda x: x[1])
-        
+
         for statement, distance in s_d:
             out += "%s:\n%.3f\n" % (statement, distance)
         file_p.write(out)
@@ -45,7 +45,7 @@ def bear_test():
     # tests(encoder_bert, df2(0.5))
     print("GPT-2")
     gpt2_file = open("gpt-2_bear_test.txt", 'w+')
-    tests(encoder_gpt2, df, gpt2_file)
+    tests(df, gpt2_file)
     print()
     # print("XLNET")
     # tests(encoder_xlnet, df2(0.25))

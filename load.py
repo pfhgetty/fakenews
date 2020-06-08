@@ -26,13 +26,13 @@ def get_relevant_texts(trusted_sources, target_article, keyword_search=False, us
         article.parse() 
         if use_summary:
             article.nlp()
-            other_texts.append(article.summary)
+            other_texts.append((article.title, article.summary))
         else:
-            other_texts.append(article.text)
+            other_texts.append((article.title, article.text))
     
     return other_texts
 
-def get_main_text(url, use_summary=false):
+def get_main_text(url, use_summary=False):
     target_article = Article(url)
     target_article.download()
     target_article.parse()
