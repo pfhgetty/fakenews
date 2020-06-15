@@ -1,0 +1,27 @@
+bbc.com Coronavirus: China rejects call for probe into origins of disease https://www.bbc.com/news/world-asia-china-52420536:
+0.684
+foxnews.com How did coronavirus break out? Theories abound as researchers race to solve genetic detective story https://www.cnn.com/2020/04/06/us/coronavirus-scientists-debate-origin-theories-invs/index.html:
+0.843
+theatlantic.com How to Misinform Yourself About the Coronavirus https://www.theatlantic.com/technology/archive/2020/01/china-coronavirus-twitter/605644/:
+0.847
+nytimes.com Senator Tom Cotton Repeats Fringe Theory of Coronavirus Origins https://www.nytimes.com/2020/02/17/business/media/coronavirus-tom-cotton-china.html:
+0.849
+msnbc.com Video - NBC News http://video.msnbc.com/:
+0.856
+wsj.com On the Ground in Wuhan, Signs of China Stalling Probe of Coronavirus Origins https://www.wsj.com/articles/china-stalls-global-search-for-coronavirus-origins-wuhan-markets-investigation-11589300842:
+0.883
+economist.com Chaguan - The pandemic will boost China�s standing, its propagandists claim https://www.economist.com/china/2020/03/26/the-pandemic-will-boost-chinas-standing-its-propagandists-claim:
+0.886
+bloomberg.com Are you a robot? https://www.bloomberg.com/news/articles/2020-05-03/pompeo-says-enormous-evidence-links-virus-to-wuhan-laboratory:
+0.889
+usatoday.com Trump says US investigating whether coronavirus spread after China lab mishap but cites no evidence https://www.usatoday.com/story/news/world/2020/04/18/trump-us-investigating-whether-coronavirus-spread-china-lab/5158551002/:
+0.898
+time.com How China Could Emerge Even Stronger After COVID-19 https://time.com/5836611/china-superpower-reopening-coronavirus/:
+0.905
+washingtonpost.com How coronavirus is worsening U.S.-China tensions https://www.washingtonpost.com/world/2020/02/18/how-coronavirus-is-worsening-us-china-tensions/:
+0.923
+apnews.com China delayed releasing coronavirus info, frustrating WHO https://apnews.com/3c061794970661042b18d5aeaaed9fae?utm_source=piano&utm_medium=email&utm_campaign=morningwire&pnespid=hORypOleFFyN6wFR.FzJhMLWOXDfn7QGHjs6q7OX:
+0.929
+
+abc.com Sources believe coronavirus outbreak originated in Wuhan lab as part of China's efforts to compete with US https://www.foxnews.com/politics/coronavirus-wuhan-lab-china-compete-us-sources:
+1.000

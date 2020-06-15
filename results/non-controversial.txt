@@ -1,0 +1,27 @@
+economist.com The Economist https://www.economist.com/taxonomy/term/34/Financial%20markets?page=188:
+0.560
+bbc.com SpaceX launch: Nasa astronauts begin historic mission on private spaceship https://www.bbc.com/news/science-environment-52855029:
+0.648
+theatlantic.com Elon Musk�s Emotional Response to a Space Milestone https://www.theatlantic.com/science/archive/2019/03/elon-musk-spacex-commercial-crew-nasa/584011/:
+0.806
+apnews.com Elon Musk�s Emotional Response to a Space Milestone https://www.bloomberg.com/news/features/2018-07-26/she-launches-spaceships-sells-rockets-and-deals-with-elon-musk:
+0.806
+wsj.com Elon Musk�s SpaceX Capsule Links Up With Space Station https://www.wsj.com/articles/elon-musks-spacex-capsule-links-up-with-space-station-11590934994:
+0.813
+time.com Here's What's So Worrying About Elon Musk's Latest Moon Plans https://time.com/5401923/elon-musk-spacex-moon/:
+0.818
+bloomberg.com Are you a robot? https://amp.usatoday.com/amp/5273465002:
+0.831
+usatoday.com Bellaby: Photo of crowd on bridge for SpaceX launch captured our attention � for real http://www.msnbc.com/transcripts/11th-hour-with-brian-williams/2020-05-27:
+0.841
+msnbc.com 100k COVID-19 deaths TRANSCRIPT: 5/27/20, The 11th Hour w/ Brian Williams https://www.foxnews.com/science/after-1-year-joyride-in-space-starman-has-probably-trashed-elons-roadster:
+0.841
+abc.com 100k COVID-19 deaths TRANSCRIPT: 5/27/20, The 11th Hour w/ Brian Williams https://www.cnn.com/2020/06/01/tech/spacex-crew-dragon-mission-whats-next-scn/index.html:
+0.841
+nytimes.com SpaceX Lifts NASA Astronauts to Orbit, Launching New Era of Spaceflight https://www.nytimes.com/2020/05/30/science/spacex-nasa-astronauts.html:
+0.842
+washingtonpost.com Elon Musk and SpaceX pull off another feat few thought possible https://www.washingtonpost.com/technology/2020/05/30/elon-musk-spacex-pull-off-another-feat-few-thought-possible/:
+0.848
+
+space.com Elon Musk 'overcome with emotion' after SpaceX's 1st astronaut launch | Space https://www.space.com/elon-musk-emotional-spacex-astronaut-launch.html
+1.000
