@@ -1,13 +1,14 @@
 from newspaper import Article
 from googlesearch import search
 import os
-
+import time
 def loadsources():
     with open(os.path.join(os.getcwd(), "trustedsources.config"), "r") as f:
         return f.read().splitlines()
 
 def get_relevant_texts(trusted_sources, target_article, keyword_search=False, use_summary=False): 
     other_texts = []
+    other_urls = []
     if keyword_search:
         target_article.nlp()
 
@@ -18,19 +19,39 @@ def get_relevant_texts(trusted_sources, target_article, keyword_search=False, us
                 search_term = search_term + " " + target_article.keywords[i]
         else:
             search_term = target_article.title
-        relavent_url = search(query= (search_term +" site:" + source), stop=1, pause=2)
-        for url in relavent_url:
-            article = Article(url)
-            break
-        article.download()
-        article.parse() 
+        while True:
+            try:
+                relavent_url = search(query= (search_term +" site:" + source), num=1, stop=1, pause=3)
+                for url in relavent_url:
+                    article = Article(url)
+                    other_urls.append(url)
+                    break
+                break
+            except:
+                print("Retrying google lol")
+                time.sleep(30)
+        while True:
+            try:
+                article.download()
+                break
+            except:
+                print(other_urls[-1])
+                print('article download failed retrying')
+        try:
+            article.parse()
+        except:
+            print(other_urls[-1])
+            print('article parse failed')
+            other_urls.pop()
+            continue
+ 
         if use_summary:
             article.nlp()
             other_texts.append((article.title, article.summary))
         else:
             other_texts.append((article.title, article.text))
     
-    return other_texts
+    return other_texts, other_urls
 
 def get_main_article(url):
     target_article = Article(url)

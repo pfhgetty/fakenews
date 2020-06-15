@@ -18,7 +18,6 @@ The bear ate three people last Tuesday.:
 0.624
 The bear killed three people. This event occurred last Tuesday.:
 0.630
-The bear killed four people last Tuesday.:
-0.649
-The bear killed three people last Wednesday.:
-0.651
+
+The bear killed three people last Tuesday.
+1.000
